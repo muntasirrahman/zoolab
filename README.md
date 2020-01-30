@@ -29,3 +29,11 @@ At BirdTest and AnimalTest classes, then ensure `assertEquals` to expected retur
     e.g. The enum Action has documentation as comment.
 * By Separating concern by separating classes into module packages
 * By coupling architecture component separately
+
+### 2. Special Sound of Duck and Chicken
+
+a. A duck says: "Quack, quack".
+b. A duck can swim.
+c. A chicken says: "Cluck, cluck".
+d. A chicken can't fly
+

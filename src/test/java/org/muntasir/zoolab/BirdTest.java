@@ -1,6 +1,5 @@
 package org.muntasir.zoolab;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,20 +7,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BirdTest {
 
-    Bird bird;
+    Bird[] bird;
 
-    @BeforeAll
+    @BeforeEach
     void setUp() {
-        bird = new Bird();
+        bird = new Bird[] {
+          new Bird(), new Duck(), new Chicken()
+        } ;
     }
 
     @Test
-    void fly() {
-        assertEquals(Action.FLY, bird.fly());
+    void fly() throws ActionException {
+        assertEquals(Action.FLY, bird[0].fly());
+        assertEquals(Action.FLY, bird[1].fly());
+        assertThrows(ActionException.class, () -> bird[2].fly());
     }
 
     @Test
     void sing() {
-        assertEquals(Action.SING, bird.sing());
+        for (Bird b : bird) {
+            assertTrue(b.sing().startsWith("Sound"));
+        }
+
     }
 }
