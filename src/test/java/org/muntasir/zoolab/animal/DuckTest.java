@@ -1,7 +1,9 @@
-package org.muntasir.zoolab;
+package org.muntasir.zoolab.animal;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.muntasir.zoolab.Action;
 import org.muntasir.zoolab.animal.Duck;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,6 +24,6 @@ class DuckTest {
 
     @Test
     void swim() {
-        assertEquals(Action.SWIM, duck.swim());
+        Assertions.assertEquals(Action.SWIM, duck.swim());
     }
 }

@@ -84,3 +84,13 @@ member variable of Dolphin, Fish, and Duck.
 Use composition approach, by delegating fly method to DefaultFlyer.
 
 By using defaultFlyer instance to decide whether it can fly or not.
+
+# E. Animal Capability Counter
+
+|*Capability*|*Count*|*Animals*|
+|------------|------:|---------|
+| Fly  |4 | Bird, Duck, Parrot, Butterfly |
+| Walk |9 | Bird, Duck, Chicken, Rooster, Parrot, Frog, Dog, Butterfly, Cat|
+| Sing |9 | Bird, Duck, Chicken, Rooster, Parrot, Dolphin, Frog, Dog, Cat |
+| Swim |5 | Duck, Fish, Shark, ClownFish, Dolphin|
+

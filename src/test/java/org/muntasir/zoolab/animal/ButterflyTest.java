@@ -19,7 +19,6 @@ class ButterflyTest {
     @Test
     void fly() {
         assertEquals(Action.WALK, bf.walk());
-        assertEquals("", bf.sing());
         assertThrows(ActionException.class, () -> bf.fly()); //fail to fly
 
         bf.metamorph();

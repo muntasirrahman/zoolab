@@ -1,7 +1,10 @@
-package org.muntasir.zoolab;
+package org.muntasir.zoolab.animal;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.muntasir.zoolab.Action;
+import org.muntasir.zoolab.ActionException;
 import org.muntasir.zoolab.animal.Bird;
 import org.muntasir.zoolab.animal.Chicken;
 import org.muntasir.zoolab.animal.Duck;
@@ -19,7 +22,7 @@ class BirdTest {
 
     @Test
     void fly() throws ActionException {
-        assertEquals(Action.FLY, bird.fly());
+        Assertions.assertEquals(Action.FLY, bird.fly());
     }
 
     @Test

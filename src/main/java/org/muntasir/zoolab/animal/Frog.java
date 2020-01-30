@@ -4,13 +4,13 @@ import org.muntasir.SoundEmitter;
 import org.muntasir.zoolab.Action;
 import org.muntasir.zoolab.Walker;
 
-public class Cat extends Animal implements Walker, SoundEmitter {
+public class Frog extends Animal implements Walker, SoundEmitter {
 
-    public static final String MEOW = "Meow";
+    public static final String CROAK = "RIBIT";
 
+    @Override
     public String sing() {
-        System.out.println("I am meow " + MEOW);
-        return MEOW;
+        return CROAK;
     }
 
     @Override

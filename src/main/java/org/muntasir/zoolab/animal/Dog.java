@@ -5,7 +5,7 @@ import org.muntasir.zoolab.Action;
 import org.muntasir.zoolab.ActionException;
 import org.muntasir.zoolab.Walker;
 
-public class Dog implements Walker, SoundEmitter {
+public class Dog extends Animal implements Walker, SoundEmitter {
 
     public static final String WOOF = "Woof, woof";
 

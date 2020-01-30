@@ -1,7 +1,8 @@
-package org.muntasir.zoolab;
+package org.muntasir.zoolab.animal;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.muntasir.zoolab.ActionException;
 import org.muntasir.zoolab.animal.Chicken;
 
 import static org.junit.jupiter.api.Assertions.*;

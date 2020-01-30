@@ -3,23 +3,18 @@ package org.muntasir.zoolab.animal;
 import org.muntasir.SoundEmitter;
 import org.muntasir.zoolab.*;
 
-public class Butterfly implements Flyer, SoundEmitter, Walker {
+public class Butterfly extends Animal implements Flyer, Walker {
 
     private boolean butterflyMode = false;
     private String mode = "CATERPILLAR";
     private DefaultFlyer defaultFlyer;
 
-    private Butterfly() {
+    public Butterfly() {
         //every butterfly must start from Caterpillar
     }
 
     public static Butterfly bornAsCaterpilllar() {
         return new Butterfly();
-    }
-
-    @Override
-    public String sing() {
-        return ""; // silent
     }
 
     @Override

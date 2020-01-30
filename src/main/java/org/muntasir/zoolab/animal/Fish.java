@@ -4,7 +4,7 @@ import org.muntasir.zoolab.Action;
 import org.muntasir.zoolab.DefaultSwimmer;
 import org.muntasir.zoolab.Swimmer;
 
-public class Fish implements Swimmer {
+public class Fish extends Animal implements Swimmer {
 
     private String color;
     private boolean large;
