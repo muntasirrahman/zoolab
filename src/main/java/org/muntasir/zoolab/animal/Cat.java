@@ -1,9 +1,10 @@
 package org.muntasir.zoolab.animal;
 
+import org.muntasir.SoundEmitter;
 import org.muntasir.zoolab.Action;
-import org.muntasir.zoolab.ActionException;
+import org.muntasir.zoolab.Walker;
 
-public class Cat extends Animal {
+public class Cat implements Walker, SoundEmitter {
 
     public static final String MEOW = "Meow";
 
@@ -12,9 +13,8 @@ public class Cat extends Animal {
         return MEOW;
     }
 
-    public Action fly() throws ActionException {
-        String reason = "Unable to fly, i don't have wing";
-        System.err.println(reason);
-        throw new ActionException(Action.FLY, reason);
+    @Override
+    public Action walk() {
+        return Action.WALK;
     }
 }

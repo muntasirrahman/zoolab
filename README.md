@@ -42,9 +42,8 @@ d. A chicken can't fly.
 
 a. Says  “Cock-a-doodle-doo”
 b. Rooster relation to chicken
-    Rooster is use same class, but different state. At constructor method, 
-    the caller passes a parameter to determine the state of the chicken instance.
-    If it a rooster, then sound variable will be set to Doodle.
+Rooster is use same class, but different state. At constructor method, the caller passes a parameter to determine 
+the state of the chicken instance. If it a rooster, then sound variable will be set to Doodle.
 
 c.  That's the way to model rooster without using inheritance.
 

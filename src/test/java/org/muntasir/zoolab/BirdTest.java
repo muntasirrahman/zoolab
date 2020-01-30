@@ -26,4 +26,9 @@ class BirdTest {
     void sing() {
         assertEquals(Bird.SING, bird.sing());
     }
+
+    @Test
+    void walking() {
+        assertEquals(Action.WALK, bird.walk());
+    }
 }

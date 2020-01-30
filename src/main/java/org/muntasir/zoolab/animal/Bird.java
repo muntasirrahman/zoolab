@@ -1,11 +1,19 @@
 package org.muntasir.zoolab.animal;
 
+import org.muntasir.SoundEmitter;
 import org.muntasir.zoolab.Action;
 import org.muntasir.zoolab.ActionException;
+import org.muntasir.zoolab.Flyer;
+import org.muntasir.zoolab.Walker;
 
-public class Bird extends Animal {
+public class Bird implements Walker, Flyer, SoundEmitter {
 
     public static final String SING = "Sing";
+
+    public Action walk() {
+        System.out.println("I am walking");
+        return Action.WALK;
+    }
 
     public Action fly() throws ActionException {
         System.out.println("I am flying");
@@ -14,6 +22,6 @@ public class Bird extends Animal {
 
     public String sing() {
         System.out.println("I am singing");
-        return "Sing";
+        return SING;
     }
 }
