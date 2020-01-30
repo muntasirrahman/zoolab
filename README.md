@@ -59,4 +59,6 @@ d.  The way to keep the parrot maintainable (e.g. another parrot\
     The SoundEmitter instance then passed to Parrot.
     The sound emitted by it, is copied by the parrot instance as its own.
     
+# B. Fish Implementation
 
+### 1. Fish doesn't sing, doesn't walk, but it can swim.
