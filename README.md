@@ -2,78 +2,72 @@
 # Java Class Composition and Inheritance
 ---
 
-# A. Basic
+![Class Diagram](Animal.png)
+
+#A. Basic
+
+### 1. Method `sing()` Implementation of class Bird
+
+#### a. How to unit test it?
+
+* Change return value of method `sing()` from void to String.
+* Use this string as parameter for method `assertEquals`
+* See class `BirdTest` and `AnimalTest`
+* Using JUnit 5
  
-## 1. Implementation of Sing method for the Bird
+#### b. How to optimise the code for maintainability?
 
-* a. How to unit test it? 
-* b. How to optimise the code for maintainability?
+* By writing comment\
+    e.g. enum `Action` has documentation as comment.
+* By Separating concern by separating classes into different packages.
+* By coupling architecture component separately, using various design patterns, e.g. Strategy design pattern. 
 
-#### 1.a. Unit Test Implementation
+### A.2. Duck and Chicken
 
-By modifying Bird's methods to return a value of enum Action:
-```$Java
-Action fly()
-Action sing()
+Chicken inability to fly is implemented by throwing `ActionException` inside method `fly()`.
+```$java
+public Action fly() throws ActionException {
+    
+    throw new ActionExection(Action.FLY, "My wings are clipped");
+}
 ```
+See class `Duck`, and class `Chicken`.
 
-The enum `Action` has following values:
-* WALK
-* FLY
-* SING
+### A.3. Rooster
 
-At BirdTest and AnimalTest classes, then ensure `assertEquals` to expected return value of each method.
+Initially Rooster is implemented as Chicken instance who has different states.
+ 
+At constructor method, the caller passes a boolean parameter to determine the new `Chicken` instance as rooster or as hen. 
 
-#### 1.b. Code Optimisation for Maintainability
+Based on parameter value, the member variable sound is adjusted accordingly.
 
-* By writing comment  \
-    e.g. The enum Action has documentation as comment.
-* By Separating concern by separating classes into module packages
-* By coupling architecture component separately
 
-### 2. Special Sound of Duck and Chicken
+### A.4. Parrot
 
-a. A duck says: "Quack, quack".\
-b. A duck can swim.\
-c. A chicken says: "Cluck, cluck".\
-d. A chicken can't fly.
-
-### 3. Rooster
-
-a. Says  “Cock-a-doodle-doo”
-b. Rooster relation to chicken
-Rooster is use same class, but different state. At constructor method, the caller passes a parameter to determine 
-the state of the chicken instance. If it a rooster, then sound variable will be set to Doodle.
-
-c.  That's the way to model rooster without using inheritance.
-
-### 4. Parrot
-
-a.  A parrot living with dogs says: “Woof, woof”\
-b.  A parrot living with cats says: “Meow"\
-c.  A parrot living near the rooster says: “Cock-a-doodle-doo”\
-d.  The way to keep the parrot maintainable (e.g. another parrot\
-    lives near a Duck? a parrot lives near a phone that rings frequently) ?
-    The way to do that is by having an interface e.g. SoundEmitter, that is implemented
-    by extension of Animals, or things. 
-    The SoundEmitter instance then passed to Parrot.
-    The sound emitted by it, is copied by the parrot instance as its own.
+* class Parrot has method `liveNearby` that accept `SoundEmitter` instance as parameter
+* interface `SoundEmitter` define method `sing()` that return String.
+* class Parrot use that value as its own sound for method `sing()`
+* Any other object that implements interface `SoundEmitter` can be used as basis of class Parrot `sing()` 
+* See class `ParrotTest` as illustration of above explanation.
     
 # B. Fish Implementation
 
-### 1. Fish doesn't sing, doesn't walk, but it can swim.
+### B.1. Can't sing, Can't walk, but It Can Swim.
 
-### 2. Shark and Clown Fish
+* Initially those are implemented as ActionException
+* Later, after refactoring, method sing() and method walk() are removed from class Fish
+* The walking and singing capability are determined by implementation of interface Walker and interface SoundEmitter. 
 
-Shark eats other fish.
-Clown Fish makes jokes.
+### B.2. Shark and ClownFish
 
-### 3. Dolphin Implementation and Reducing Code Duplication
+* See class `Shark` and class`ClownFish`
 
-Dolphin implements Swimmer interface.
 
-To reduce code duplication, use DefaultSwimmer class, and make it as 
-member variable of Dolphin, Fish, and Duck. 
+### B.3. Dolphin
+
+* class `Dolphin` implements interface `Swimmer` without extending class `Fish`
+* To minimize code duplication, the actual method `swim()` is implemented by class `DefaultSwimmer`.
+* class `DefaultSwimmer` is instantiated inside method constructor of class Dolphin, Fish, Duck, Shark, ClownFish. 
 
 # D. Animal that change over time (Butterfly)
 
@@ -81,9 +75,10 @@ member variable of Dolphin, Fish, and Duck.
 
 ### D.2. Caterpillar metamorphose to Butterfly
 
-Use composition approach, by delegating fly method to DefaultFlyer.
-
-By using defaultFlyer instance to decide whether it can fly or not.
+* The caterpillar mode is modeled as group state of member variable of class Butterfly.
+* The detail of method `fly()` is delegated class DefaultFlyer.
+* An instance of class DefaultFlyer is created, after method `metamorphose()` is invoked.  
+* See class `Butterfly` and class `ButterflyTest` as illustration.
 
 # E. Animal Capability Counter
 
