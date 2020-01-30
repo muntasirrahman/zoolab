@@ -1,4 +1,6 @@
-package org.muntasir.zoolab;
+package org.muntasir.zoolab.animal;
+
+import org.muntasir.zoolab.Action;
 
 public class Duck extends Bird {
 
@@ -6,7 +8,7 @@ public class Duck extends Bird {
 
     public String sing() {
         System.out.println("I am singing " + QUACK);
-        return "Sound: " + QUACK;
+        return QUACK;
     }
 
     public Action swim() {

@@ -1,8 +1,9 @@
 
 # Java Class Composition and Inheritance
-
 ---
 
+# A. Basic
+ 
 ## 1. Implementation of Sing method for the Bird
 
     * a. How to unit test it? 
@@ -36,4 +37,27 @@ a. A duck says: "Quack, quack".\
 b. A duck can swim.\
 c. A chicken says: "Cluck, cluck".\
 d. A chicken can't fly.
+
+### 3. Rooster
+
+a. Says  “Cock-a-doodle-doo”
+b. Rooster relation to chicken
+    Rooster is use same class, but different state. At constructor method, 
+    the caller passes a parameter to determine the state of the chicken instance.
+    If it a rooster, then sound variable will be set to Doodle.
+
+c.  That's the way to model rooster without using inheritance.
+
+### 4. Parrot
+
+a.  A parrot living with dogs says: “Woof, woof”\
+b.  A parrot living with cats says: “Meow"\
+c.  A parrot living near the rooster says: “Cock-a-doodle-doo”\
+d.  The way to keep the parrot maintainable (e.g. another parrot\
+    lives near a Duck? a parrot lives near a phone that rings frequently) ?
+    The way to do that is by having an interface e.g. SoundEmitter, that is implemented
+    by extension of Animals, or things. 
+    The SoundEmitter instance then passed to Parrot.
+    The sound emitted by it, is copied by the parrot instance as its own.
+    
 

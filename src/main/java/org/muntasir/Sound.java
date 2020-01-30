@@ -1,4 +1,4 @@
-package org.muntasir.zoolab;
+package org.muntasir;
 
 public enum Sound {
     QUACK,

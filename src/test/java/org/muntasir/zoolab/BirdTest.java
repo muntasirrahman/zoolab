@@ -2,32 +2,28 @@ package org.muntasir.zoolab;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.muntasir.zoolab.animal.Bird;
+import org.muntasir.zoolab.animal.Chicken;
+import org.muntasir.zoolab.animal.Duck;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BirdTest {
 
-    Bird[] bird;
+    Bird bird;
 
     @BeforeEach
     void setUp() {
-        bird = new Bird[] {
-          new Bird(), new Duck(), new Chicken()
-        } ;
+        bird = new Bird();
     }
 
     @Test
     void fly() throws ActionException {
-        assertEquals(Action.FLY, bird[0].fly());
-        assertEquals(Action.FLY, bird[1].fly());
-        assertThrows(ActionException.class, () -> bird[2].fly());
+        assertEquals(Action.FLY, bird.fly());
     }
 
     @Test
     void sing() {
-        for (Bird b : bird) {
-            assertTrue(b.sing().startsWith("Sound"));
-        }
-
+        assertEquals(Bird.SING, bird.sing());
     }
 }
