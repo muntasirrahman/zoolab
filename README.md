@@ -1,5 +1,6 @@
 
 Java Class Composition and Inheritance
+
 ---
 
 # 1. Implementation of Sing method for the Bird
