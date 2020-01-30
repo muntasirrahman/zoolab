@@ -32,8 +32,8 @@ At BirdTest and AnimalTest classes, then ensure `assertEquals` to expected retur
 
 ### 2. Special Sound of Duck and Chicken
 
-a. A duck says: "Quack, quack".
-b. A duck can swim.
-c. A chicken says: "Cluck, cluck".
-d. A chicken can't fly
+a. A duck says: "Quack, quack".\
+b. A duck can swim.\
+c. A chicken says: "Cluck, cluck".\
+d. A chicken can't fly.
 
