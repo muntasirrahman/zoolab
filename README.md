@@ -6,8 +6,8 @@
  
 ## 1. Implementation of Sing method for the Bird
 
-    * a. How to unit test it? 
-    * b. How to optimise the code for maintainability?
+* a. How to unit test it? 
+* b. How to optimise the code for maintainability?
 
 #### 1.a. Unit Test Implementation
 
