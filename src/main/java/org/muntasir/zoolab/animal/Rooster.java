@@ -3,12 +3,12 @@ package org.muntasir.zoolab.animal;
 import org.muntasir.zoolab.Action;
 import org.muntasir.zoolab.ActionException;
 
+import java.util.Locale;
+
 public class Rooster extends Bird {
 
-    public static final String DOODLE = "Cock-a-doodle-doo";
-
     public String sing() {
-        return DOODLE;
+        return resourceBundle.getString("rooster");
     }
 
     public Action fly() throws ActionException {

@@ -98,3 +98,16 @@ See [AnimalCounter.java](src/main/java/org/muntasir/zoolab/main/AnimalCounter.ja
 | Sing |9 | Bird, Duck, Chicken, Rooster, Parrot, Dolphin, Frog, Dog, Cat |
 | Swim |5 | Duck, Fish, Shark, ClownFish, Dolphin|
 
+# BONUS
+
+### Bonus.1 Second Language
+
+* Add 2 additional languages: Germany and Indonesia
+* See [LanguageDemo.java](src/main/java/org/muntasir/zoolab/main/LanguageDemo.java)
+* See [Rooster.java](src/main/java/org/muntasir/zoolab/animal/Rooster.java) and [Animal.java](src/main/java/org/muntasir/zoolab/animal/Animal.java) 
+* Output: kikeriki (DE), Kukuruyuk (ID)
+
+
+
+
+

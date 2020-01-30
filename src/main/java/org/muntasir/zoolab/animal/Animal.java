@@ -1,9 +1,18 @@
 package org.muntasir.zoolab.animal;
 
-import org.muntasir.SoundEmitter;
-import org.muntasir.zoolab.Action;
-import org.muntasir.zoolab.Walker;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
-public abstract class Animal {
+public class Animal {
 
+    protected ResourceBundle resourceBundle;
+
+    public Animal() {
+        resourceBundle = ResourceBundle.getBundle("animal", Locale.getDefault());
+    }
+
+    public void changeLanguage(String language, String country) {
+        Locale locale = new Locale(language, country);
+        resourceBundle = ResourceBundle.getBundle("animal", locale);
+    }
 }
