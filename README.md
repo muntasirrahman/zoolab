@@ -62,3 +62,9 @@ d.  The way to keep the parrot maintainable (e.g. another parrot\
 # B. Fish Implementation
 
 ### 1. Fish doesn't sing, doesn't walk, but it can swim.
+
+### 2. Shark and Clown Fish
+
+Shark eats other fish.
+Clown Fish makes jokes.
+
