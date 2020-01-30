@@ -74,3 +74,8 @@ Dolphin implements Swimmer interface.
 
 To reduce code duplication, use DefaultSwimmer class, and make it as 
 member variable of Dolphin, Fish, and Duck. 
+
+# D. Animal that change over time (Butterfly)
+
+### D.1. Butterfly can fly, but it doesn't make sound
+
