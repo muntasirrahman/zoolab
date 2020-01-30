@@ -1,5 +1,8 @@
 
-# 1. Implement Sing method for the Bird
+Java Class Composition and Inheritance
+---
+
+# 1. Implementation of Sing method for the Bird
     * a. How to unit test it? 
     * b. How to optimise the code for maintainability?
 
