@@ -9,22 +9,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ButterflyTest {
 
-    Butterfly butterfly;
+    Butterfly bf;
 
     @BeforeEach
     void setUp() {
-        butterfly = new Butterfly();
-    }
-
-    @Test
-    void sing() {
-        assertEquals("", butterfly.sing());
+        bf = Butterfly.bornAsCaterpilllar();
     }
 
     @Test
     void fly() {
+        assertEquals(Action.WALK, bf.walk());
+        assertEquals("", bf.sing());
+        assertThrows(ActionException.class, () -> bf.fly()); //fail to fly
+
+        bf.metamorph();
+
         try {
-            assertEquals(Action.FLY, butterfly.fly());
+            //now it can fly
+            assertEquals(Action.FLY, bf.fly());
 
         } catch (ActionException e) {
             System.err.println("ActionException occured");

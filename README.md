@@ -79,3 +79,8 @@ member variable of Dolphin, Fish, and Duck.
 
 ### D.1. Butterfly can fly, but it doesn't make sound
 
+### D.2. Caterpillar metamorphose to Butterfly
+
+Use composition approach, by delegating fly method to DefaultFlyer.
+
+By using defaultFlyer instance to decide whether it can fly or not.
