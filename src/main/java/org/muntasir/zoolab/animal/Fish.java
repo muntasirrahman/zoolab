@@ -1,12 +1,15 @@
 package org.muntasir.zoolab.animal;
 
 import org.muntasir.zoolab.Action;
+import org.muntasir.zoolab.DefaultSwimmer;
 import org.muntasir.zoolab.Swimmer;
 
 public class Fish implements Swimmer {
 
     private String color;
     private boolean large;
+
+    private DefaultSwimmer defaultSwimmer = new DefaultSwimmer();
 
     public Fish() {
         this.color = "";
@@ -28,7 +31,7 @@ public class Fish implements Swimmer {
 
     @Override
     public Action swim() {
-        return Action.SWIM;
+        return defaultSwimmer.swim();
     }
 
 

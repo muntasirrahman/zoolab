@@ -68,3 +68,9 @@ d.  The way to keep the parrot maintainable (e.g. another parrot\
 Shark eats other fish.
 Clown Fish makes jokes.
 
+### 3. Dolphin Implementation and Reducing Code Duplication
+
+Dolphin implements Swimmer interface.
+
+To reduce code duplication, use DefaultSwimmer class, and make it as 
+member variable of Dolphin, Fish, and Duck. 
