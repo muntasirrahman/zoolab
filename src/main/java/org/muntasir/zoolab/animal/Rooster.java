@@ -7,6 +7,9 @@ import java.util.Locale;
 
 public class Rooster extends Bird {
 
+    public Rooster() {
+    }
+
     public String sing() {
         return resourceBundle.getString("rooster");
     }

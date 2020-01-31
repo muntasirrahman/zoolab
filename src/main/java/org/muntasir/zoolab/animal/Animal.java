@@ -7,8 +7,25 @@ public class Animal {
 
     protected ResourceBundle resourceBundle;
 
+    private String id;
+
+    private String species;
+
     public Animal() {
         resourceBundle = ResourceBundle.getBundle("animal", Locale.getDefault());
+        this.species = getClass().getSimpleName();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void changeLanguage(String language, String country) {

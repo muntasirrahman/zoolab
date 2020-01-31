@@ -31,4 +31,12 @@ public class Chicken extends Bird {
         System.err.println(reason);
         throw new ActionException(Action.FLY, reason);
     }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public String getSound() {
+        return sound;
+    }
 }

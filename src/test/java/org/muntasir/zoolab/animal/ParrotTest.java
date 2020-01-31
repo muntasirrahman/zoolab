@@ -36,5 +36,6 @@ class ParrotTest {
         Phone phone = new Phone();
         parrot.liveNearby(phone);
         assertEquals(Phone.RING, parrot.sing());
+
     }
 }

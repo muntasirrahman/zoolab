@@ -107,6 +107,12 @@ See [AnimalCounter.java](src/main/java/org/muntasir/zoolab/main/AnimalCounter.ja
 * See [Rooster.java](src/main/java/org/muntasir/zoolab/animal/Rooster.java) and [Animal.java](src/main/java/org/muntasir/zoolab/animal/Animal.java) 
 * Output: kikeriki (DE), Kukuruyuk (ID)
 
+### Bonus.2 Web Service
+
+* Use Spring Boot for microservice
+* See [ResourceController.java](src/main/java/org/muntasir/zoolab/main/ResourceController.java)
+
+
 
 
 
