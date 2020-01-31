@@ -109,7 +109,7 @@ See [AnimalCounter.java](src/main/java/org/muntasir/zoolab/main/AnimalCounter.ja
 
 ### Bonus.2 Web Service
 
-* Use Spring Boot for microservice
+* Use Spring Boot for RESTful service
 * See [ResourceController.java](src/main/java/org/muntasir/zoolab/main/ResourceController.java)
 
 
